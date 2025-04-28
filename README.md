@@ -3,7 +3,7 @@
 The **Randalbumizer** is a data-driven random album generator built with Python and Flask.
 
 ##  Features
-- Generate 1–100 random albums at a time
+- Generate a **custom number** of random albums (choose between **1–100** albums)
 - Filter albums by:
   - Genre
   - Year of release range
@@ -18,6 +18,6 @@ The **Randalbumizer** is a data-driven random album generator built with Python 
 - 1,000+ total albums
 
 ##  How It Works
-- User selects options on the homepage
-- Flask pulls random results from the database with applied filters
-- Results are rendered dynamically on a clean web page
+- User selects genre, number of albums, and year range on the homepage
+- Flask queries the database and randomly selects the specified number of albums
+- Results are dynamically rendered on a clean, user-friendly web page
