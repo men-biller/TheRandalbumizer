@@ -15,7 +15,7 @@ The **Randalbumizer** is a data-driven random album generator built with Python 
 
 ##  Data Sources
 - 5 curated genre-specific MySQL tables
-- 1,000+ total albums
+- 1,000 total albums
 
 ##  How It Works
 - User selects genre, number of albums, and year range on the homepage
