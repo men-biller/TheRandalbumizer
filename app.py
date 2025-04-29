@@ -37,8 +37,8 @@ def clean_text(text):
 def get_random_albums(table, count, start_year, end_year):
     connection = pymysql.connect(
         host='localhost',
-        user='benjvfxw_rand_albumize',
-        password='732!4dd$7993bifhd111',
+        user='',
+        password='',
         database='benjvfxw_therandalbumizer'
     )
     with connection.cursor() as cursor:
