@@ -15,15 +15,15 @@ COLUMN_LABELS = {
     'genres': 'Genres'
 }
 
-# --- Text cleaning function ---
+# --- Text cleaning function for mishandled data ---
 def clean_text(text):
     if not isinstance(text, str):
         return text  # If not a string, just return it as-is
 
-    # Normalize unicode (fixes weird accents, symbols)
+    # Normalize unicode 
     text = unicodedata.normalize('NFKC', text)
 
-    # Replace suspicious '?' between word characters with a hyphen
+    # Replace '?' between word characters with a hyphen
     text = re.sub(r'(?<=\w)\?(?=\w)', '-', text)
 
     # Remove any leftover standalone question marks
@@ -70,7 +70,7 @@ def get_random_albums(table, count, start_year, end_year):
         if 'artist' in album:
             album['artist'] = clean_text(album['artist'])
         if 'genres' in album:
-            album['genres'] = clean_text(album['genres'])  # Optional: depends on your needs
+            album['genres'] = clean_text(album['genres']) 
 
     return columns, albums
 
